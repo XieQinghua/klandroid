@@ -1,0 +1,47 @@
+C:\Users\Administrator>keytool -list -v -keystore C:/Users/Administrator/key/hap
+pyi.keystore
+输入密钥库口令:
+
+*****************  WARNING WARNING WARNING  *****************
+* 存储在您的密钥库中的信息的完整性  *
+* 尚未经过验证!  为了验证其完整性, *
+* 必须提供密钥库口令。                  *
+*****************  WARNING WARNING WARNING  *****************
+
+密钥库类型: JKS
+密钥库提供方: SUN
+
+您的密钥库包含 1 个条目
+
+别名: happyi_2015
+创建日期: 2015-12-25
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=happyi, OU=hunankuaileyi, O=kuaileyi, L=ChangSha, ST=HuNan, C=ZH
+发布者: CN=happyi, OU=hunankuaileyi, O=kuaileyi, L=ChangSha, ST=HuNan, C=ZH
+序列号: 3f32d2ec
+有效期开始日期: Fri Dec 25 19:30:30 CST 2015, 截止日期: Tue Dec 18 19:30:30 CST
+2040
+证书指纹:
+         MD5: CD:82:19:E6:D3:4E:67:7E:82:24:4C:4F:AE:42:11:05
+         SHA1: A9:7C:0E:0B:6E:7B:F1:52:F3:1E:4A:D9:D7:4F:E0:58:F3:17:4B:9A
+         SHA256: AB:3E:88:0F:47:9A:AD:FD:21:13:E4:77:E6:99:31:EC:16:C6:54:5B:A4:
+E0:1B:54:4B:89:BF:DD:4D:D7:2F:46
+         签名算法名称: SHA256withRSA
+         版本: 3
+
+扩展:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 1D D7 83 FD B3 9C 35 EB   C8 E2 C1 65 46 2F 51 83  ......5....eF/Q.
+0010: C1 5B 56 30                                        .[V0
+]
+]
+
+
+
+*******************************************
+*******************************************

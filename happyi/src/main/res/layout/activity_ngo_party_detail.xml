@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_title_center"
+            style="@style/happyi_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/myParty" />
+    </RelativeLayout>
+
+    <org.thvc.happyi.view.PullToRefreshView
+        android:id="@+id/pull_to_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/sv_ngo_party_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_party_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_empty_default" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_party_subject"
+                        android:background="@color/white"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_party_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text=""
+                            android:textColor="@color/happyi_title_color"
+                            android:textSize="@dimen/font_size_big"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_foundation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_party_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text=""
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/font_size_big" />
+
+                            <TextView
+                                android:id="@+id/tv_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:drawablePadding="5dp"
+                                android:drawableRight="@drawable/icon_renzheng"
+                                android:text="已认证"
+                                android:textColor="@color/orangered"
+                                android:textSize="@dimen/font_size_small" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_party_name"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:drawablePadding="5dp"
+                            android:text=""
+                            android:textColor="@color/happyi_secondary_content"
+                            android:textSize="@dimen/font_size_middle" />
+
+                        <TextView
+                            android:id="@+id/tv_deadline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_party_name"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/tv_address"
+                            android:drawablePadding="5dp"
+                            android:text=""
+                            android:textColor="@color/happyi_secondary_content"
+                            android:textSize="@dimen/font_size_middle" />
+
+                        <TextView
+                            android:id="@+id/tv_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_party_name"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/tv_deadline"
+                            android:drawablePadding="5dp"
+                            android:text=""
+                            android:textColor="@color/happyi_secondary_content"
+                            android:textSize="@dimen/font_size_middle" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_label_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_deadline">
+
+                            <LinearLayout
+                                android:id="@+id/ll_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="7dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_party_label1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/text_normal_shape"
+                                    android:paddingBottom="2dp"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    android:paddingTop="2dp"
+                                    android:textColor="@color/happyi_secondary_content"
+                                    android:textSize="@dimen/font_size_small"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/tv_party_label2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/text_normal_shape"
+                                    android:paddingBottom="2dp"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    android:paddingTop="2dp"
+                                    android:textColor="@color/happyi_secondary_content"
+                                    android:textSize="@dimen/font_size_small"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:id="@+id/tv_party_label3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/text_normal_shape"
+                                    android:paddingBottom="2dp"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    android:paddingTop="2dp"
+                                    android:textColor="@color/happyi_secondary_content"
+                                    android:textSize="@dimen/font_size_small"
+                                    android:visibility="invisible" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <include layout="@layout/item_tab_party_detail" />
+
+                <FrameLayout
+                    android:id="@+id/fl_party_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </ScrollView>
+    </org.thvc.happyi.view.PullToRefreshView>
+</LinearLayout>

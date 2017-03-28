@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_center"
+                style="@style/happyi_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_password" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/text_corners_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="提示：为了您的账户安全，请谨记您的密码" />
+
+    <EditText
+        android:id="@+id/et_old_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/button_normal_shape"
+        android:gravity="center_vertical"
+        android:hint="请输入您的原始密码"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/font_size_middle" />
+
+    <EditText
+        android:id="@+id/et_new_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_normal_shape"
+        android:gravity="center_vertical"
+        android:hint="请输入您的新密码"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/font_size_middle" />
+
+    <EditText
+        android:id="@+id/et_again_new_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_normal_shape"
+        android:gravity="center_vertical"
+        android:hint="请重复输入新密码"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/font_size_middle" />
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/btn_ok_selector"
+        android:onClick="submit"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_big" />
+</LinearLayout>

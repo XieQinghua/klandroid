@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_center"
+                style="@style/happyi_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动报名" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_actual_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/orangered"
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_original_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_actual_money"
+            android:layout_toRightOf="@+id/tv_actual_money"
+            android:textColor="@color/happyi_secondary_content"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_save_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_actual_money"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_person_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv_realname"
+                style="@style/happyi_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="姓名" />
+
+            <EditText
+                android:id="@+id/et_realname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/tv_realname"
+                android:background="@null"
+                android:hint="@string/enter_name"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_big" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="55dp"
+            android:background="@color/party_background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv_sex_title"
+                style="@style/happyi_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="性别" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/tv_sex_title"
+                android:background="@null"
+                android:padding="10dp"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_big" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="55dp"
+            android:background="@color/party_background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv_tel"
+                style="@style/happyi_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="手机" />
+
+            <EditText
+                android:id="@+id/et_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/tv_tel"
+                android:background="@null"
+                android:hint="@string/enter_phone_number"
+                android:padding="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_big" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="55dp"
+            android:background="@color/party_background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_age"
+                style="@style/happyi_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="年龄" />
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/tv_age"
+                android:background="@null"
+                android:padding="10dp"
+                android:inputType="number"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_big" />
+        </RelativeLayout>
+
+        <!--  <View
+              android:layout_width="wrap_content"
+              android:layout_height="1dp"
+              android:layout_marginLeft="55dp"
+              android:background="@color/party_background" />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_job"
+                style="@style/happyi_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="职业" />
+
+            <EditText
+                android:id="@+id/et_job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/tv_job"
+                android:background="@null"
+                android:hint="@string/enter_job"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_big" />
+        </RelativeLayout>
+
+        <!--<View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="55dp"
+            android:background="@color/party_background" />-->
+
+        <RelativeLayout
+            android:id="@+id/rl_identity_info"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_identity"
+                style="@style/happyi_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="身份证" />
+
+            <EditText
+                android:id="@+id/et_identity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/tv_identity"
+                android:background="@null"
+                android:hint="@string/enter_identity_number"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_big" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_identity"
+                android:layout_marginLeft="15dp"
+                android:text="@string/identity_remark"
+                android:textColor="@color/happyi_secondary_content"
+                android:textSize="@dimen/font_size_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pic_info"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_pic"
+                style="@style/happyi_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="照片" />
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_pic"
+                android:scaleType="fitXY"
+                android:background="@drawable/btn_addpic_selector" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_Next_step"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_ok_selector"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_big" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_team_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="温馨提示"
+            android:textColor="@color/happyi_title_color"
+            android:textSize="@dimen/font_size_big" />
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/orangered" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/party_background" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/join_remark"
+            android:textColor="@color/happyi_title_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_identity"
+            android:background="@color/party_background"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/identity_remark"
+            android:textColor="@color/happyi_content_color"
+            android:textSize="@dimen/font_size_normal" />
+    </LinearLayout>
+</LinearLayout>

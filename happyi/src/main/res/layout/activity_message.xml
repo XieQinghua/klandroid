@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_center"
+                style="@style/happyi_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的消息" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_setread"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/btn_ok_selector"
+            android:text="全部已读"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+
+
+    <org.thvc.happyi.view.XList.XListView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_layout_title"
+        android:background="@color/white"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+
+    <TextView
+        android:id="@+id/message_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/img_error"
+        android:gravity="center"
+        android:textColor="@color/happyi_secondary_content"
+        android:textSize="@dimen/font_size_big"
+        android:visibility="gone" />
+
+</RelativeLayout>

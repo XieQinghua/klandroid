@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\androidcode\klandroid\library\src\main\assets"/><source path="E:\androidcode\klandroid\library\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="E:\androidcode\klandroid\library\src\release\assets"/></dataSet></merger>

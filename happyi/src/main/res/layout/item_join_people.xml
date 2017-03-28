@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:background="@color/white">
+
+    <org.thvc.happyi.view.CircleImageView
+        android:id="@+id/iv_ngo_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/icon_head_default" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_big"
+        android:visibility="invisible" />
+</FrameLayout>

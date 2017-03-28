@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_number"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tv_number_of_branches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="已有0条评论"
+            android:textColor="@color/happyi_content_color"
+            android:textSize="@dimen/font_size_middle" />
+
+        <TextView
+            android:id="@+id/tv_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/icon_party_comment"
+            android:drawablePadding="5dp"
+            android:padding="5dp"
+            android:text="参与评价"
+            android:textColor="@color/orangered"
+            android:textSize="@dimen/font_size_normal" />
+    </RelativeLayout>
+
+    <!-- <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:layout_alignParentBottom="true"
+         android:background="@color/party_background" />-->
+
+    <org.thvc.happyi.view.MyListView
+        android:id="@+id/lv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_number"
+        android:layout_marginTop="1dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="#00000000" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="150dp"
+        android:layout_marginTop="150dp"
+        android:drawablePadding="5dp"
+        android:drawableTop="@drawable/img_error"
+        android:gravity="center"
+        android:textColor="@color/happyi_secondary_content"
+        android:textSize="@dimen/font_size_normal"
+        android:visibility="gone" />
+</RelativeLayout>

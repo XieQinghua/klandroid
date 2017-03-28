@@ -1,0 +1,50 @@
+package org.thvc.happyi.fragment;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import com.baidu.mapapi.search.route.WalkingRouteResult;
+
+import org.thvc.happyi.R;
+import org.thvc.happyi.activity.DestinationActivity;
+import org.thvc.happyi.activity.RouteChooseActivity;
+import org.thvc.happyi.activity.RouteResultActivity;
+import org.thvc.happyi.adapter.WalkingRouteAdapter;
+import org.thvc.happyi.bean.PlaceBean;
+
+/**
+ * Created by huangxinqi on 2016/1/21.
+ */
+public class WalkFragment extends Fragment {
+    private WalkingRouteResult walkingRouteResult;
+    private WalkingRouteAdapter adapter;
+    private PlaceBean placeBean;
+    private ListView listView;
+
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_route, null);
+        walkingRouteResult = ((RouteChooseActivity) getActivity()).getWalkingRouteResult();
+        listView = (ListView) view.findViewById(R.id.lv_route);
+        placeBean = (PlaceBean) getArguments().getSerializable("place");
+        adapter = new WalkingRouteAdapter(getActivity(), walkingRouteResult, placeBean);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), RouteResultActivity.class);
+                intent.putExtra("place", placeBean);
+                intent.putExtra("index", position);
+                intent.putExtra("type", DestinationActivity.WALK);
+                startActivity(intent);
+            }
+        });
+        return view;
+    }
+}

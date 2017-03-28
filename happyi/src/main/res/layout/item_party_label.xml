@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/im_special"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/img_empty_default" />
+
+    <TextView
+        android:id="@+id/im_party_tite"
+        style="@style/happyi_normal_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/im_special"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="红色征途"
+        android:textSize="@dimen/font_size_middle" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        style="@style/happyi_normal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/im_party_tite"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="5dp"
+        android:text="￥ 85"
+        android:textColor="@color/orangered" />
+
+    <TextView
+        android:id="@+id/tv_fans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/im_party_tite"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/icon_star_grey"
+        android:drawablePadding="5dp"
+        android:paddingBottom="5dp"
+        android:text="85"
+        android:textColor="@color/happyi_content_color"
+        android:textSize="@dimen/font_size_normal" />
+
+</RelativeLayout>

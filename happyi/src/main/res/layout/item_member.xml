@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 家庭报名成员 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tv_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="成员"
+        android:textColor="@color/happyi_title_color"
+        android:textSize="@dimen/font_size_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textColor="@color/happyi_title_color"
+            android:textSize="@dimen/font_size_middle" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入姓名"
+            android:padding="5dp"
+            android:textSize="@dimen/font_size_middle" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/party_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="手机号码"
+            android:textColor="@color/happyi_title_color"
+            android:textSize="@dimen/font_size_middle" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入电话号码"
+            android:padding="5dp"
+            android:textSize="@dimen/font_size_middle" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/party_background" />
+
+    <LinearLayout
+        android:id="@+id/ll_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="性别"
+            android:textColor="@color/happyi_title_color"
+            android:textSize="@dimen/font_size_middle" />
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/type_selector"
+                android:padding="5dp"
+                android:text="男"
+                android:textSize="@dimen/font_size_middle" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/type_selector"
+                android:padding="5dp"
+                android:text="女"
+                android:textSize="@dimen/font_size_middle" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/party_background" />
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:padding="10dp">
+
+         <TextView
+             android:layout_width="60dp"
+             android:layout_height="wrap_content"
+             android:text="职业"
+             android:textColor="@color/happyi_title_color"
+             android:textSize="@dimen/font_size_middle" />
+
+         <EditText
+             android:id="@+id/et_job"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@null"
+             android:hint="请输入职业"
+             android:padding="5dp"
+             android:textSize="@dimen/font_size_middle" />
+     </LinearLayout>
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:background="@color/party_background" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_idCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="身份证"
+            android:textColor="@color/happyi_title_color"
+            android:textSize="@dimen/font_size_middle" />
+
+        <EditText
+            android:id="@+id/et_idCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入身份证号码"
+            android:padding="5dp"
+            android:textSize="@dimen/font_size_middle" />
+    </LinearLayout>
+</LinearLayout>

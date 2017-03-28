@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.thvc.happyi"
+    android:installLocation="preferExternal"
+    android:versionCode="3"><!--versionCode每次提交版本更新数字+1，要求.gradle里的versionName跟随一起增加，禁止出现同一个VersionName对应了多个VersionCode-->
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--保存资源到SD卡-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 支付宝权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 微信支付 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 百度地图 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 极光推送 -->
+    <permission
+        android:name="org.thvc.happyi.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="org.thvc.happyi.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".application.HappyiApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- 百度地图 的AK 到时候需要登陆百度地图的控制台更换SHA1数字签名 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="gkfWy2z2H64rh3td2lxPEMqu" />
+        <!-- 程序启动入口，同时做是否第一次运行APP判断 WelcomeActivity-->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HappyiNoTitle.CustomerBackground">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <!-- 目的地的地图-->
+        <activity
+            android:name=".activity.DestinationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 路径选择 -->
+        <activity
+            android:name=".activity.RouteChooseActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 路径展示 -->
+        <activity
+            android:name=".activity.RouteResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 主程序 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 引导页 -->
+        <activity
+            android:name=".activity.GuideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 开屏页 -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HappyiNoTitle.CustomerBackground" />
+        <!-- 爱周末用户注册协议 -->
+        <activity
+            android:name=".activity.UserAgreementActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 搜索页 -->
+        <activity
+            android:name=".activity.SearchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!--活动H5详情页面-->
+        <activity
+            android:name=".activity.PartyWebDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 活动原生详情页面 -->
+        <activity
+            android:name=".activity.PartyNativeDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 活动图文详情页面 -->
+        <activity
+            android:name=".activity.PartyContentDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <!--更多好友页面-->
+        <activity
+            android:name=".activity.MoreJoinPeopleActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 扫一扫 -->
+        <activity
+            android:name=".Zxing.MipcaActivityCapture"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 二维码 -->
+        <activity
+            android:name=".Zxing.MyErweimaActivity"
+            android:label="@string/app_name" />
+        <!-- 设置 -->
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 修改密码 -->
+        <activity
+            android:name=".activity.ChangePwdActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- NGO原生详情页面 -->
+        <activity
+            android:name=".activity.NgoNativeDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 活动搜索页面-->
+        <activity
+            android:name=".activity.PartyListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 热门活动，精品活动，最新活动搜索页面-->
+        <activity
+            android:name=".activity.PartyTypeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 基金会原生详情页面 -->
+        <activity
+            android:name=".activity.FundNativeDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 粉丝页面 -->
+        <activity
+            android:name=".activity.FansActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 消息页面 -->
+        <activity
+            android:name=".activity.MessageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 我的活动页面 -->
+        <activity
+            android:name=".activity.NgoMyPartyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 我的活动劵页面 -->
+        <activity
+            android:name=".activity.MyTicketActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 个人信息 -->
+        <activity
+            android:name=".activity.PersonalDataActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- NGO个人信息 -->
+        <activity
+            android:name=".activity.NgoDataActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- NGO活动列表 -->
+        <!-- ngo活动列表详情 -->
+        <activity
+            android:name=".activity.NgoPartyDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!--认证管理-->
+        <activity
+            android:name=".activity.AuthManageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- NGO退款操作 -->
+        <activity
+            android:name=".activity.RefundActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- App介绍页面 -->
+        <activity
+            android:name=".activity.HappyiIntroduceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 意见反馈 -->
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 基金会个人信息页面 -->
+        <activity
+            android:name=".activity.FundDataActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 基金会待认领活动页面 -->
+        <activity
+            android:name=".activity.NoClaimPartyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 基金会已认领活动页面 -->
+        <activity
+            android:name=".activity.ClaimPartyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 个人用户我的关注 -->
+        <activity
+            android:name=".activity.MyCollectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- Ngo粉丝页面 -->
+        <activity
+            android:name=".activity.NgoFansActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- Ngo用户我的关注 -->
+        <activity
+            android:name=".activity.NgoCollectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 普通用户的我的活动 -->
+        <activity
+            android:name=".activity.OrdinaryMypartyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 普通用户的我的活动报名信息 -->
+        <!-- 活动报名页面 -->
+        <activity
+            android:name=".activity.PartyJoinActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 活动报名信息 -->
+        <activity
+            android:name=".activity.RegCompletedActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 付款页面 -->
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme">
+
+            <!-- 这个intent-filter不要忘了 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx3cbe9547aab6bcb4" />
+            </intent-filter>
+        </activity>
+
+        <!-- H5点击调接口 -->
+        <activity
+            android:name=".activity.ARefundActivity"
+            android:label="@string/app_name"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 活动现场更新页面 -->
+        <activity
+            android:name=".activity.PartySceneUpdateActivity"
+            android:label="@string/app_name"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 活动图集页面 -->
+        <activity
+            android:name=".activity.ImageActivity"
+            android:label="@string/app_name"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 普通用户退款记录页面 -->
+        <activity
+            android:name=".activity.RefundRecordActivity"
+            android:label="@string/app_name"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+
+        <!-- 输入表情页面 -->
+        <activity
+            android:name=".activity.CommentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <!-- 报名信息 -->
+        <activity
+            android:name=".activity.RegisterInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <activity
+            android:name=".activity.FamilyEnrollActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- <activity -->
+        <!-- android:name=".activity.ImageBucketChooseActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:theme="@style/JK.SwipeBack.Transparent.Theme" /> -->
+
+        <activity
+            android:name=".activity.ImageBucketChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.ImageChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.ImageZoomActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- 账户管理-->
+        <activity
+            android:name=".activity.AccountManageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+
+        <!-- <activity -->
+        <!-- android:name=".activity.ImageChooseActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:theme="@style/JK.SwipeBack.Transparent.Theme" /> -->
+
+
+        <!-- <activity -->
+        <!-- android:name=".activity.ImageZoomActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:theme="@style/JK.SwipeBack.Transparent.Theme" /> -->
+
+
+        <!-- 选择支付宝或银行卡退款 -->
+        <activity
+            android:name=".activity.RefundOptionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme" />
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 调用新浪原生SDK，需要注册的回调activity -->
+        <activity
+            android:name="cn.sharesdk.sina.weibo.SinaActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- OneKeyShare 核心功能 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1104880259" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 支付宝 -->
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <receiver android:name=".utils.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!-- BaiduMap -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <!-- 极光推送 -->
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="org.thvc.happyi" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="org.thvc.happyi" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required  显示通知栏 -->
+                <category android:name="org.thvc.happyi" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".utils.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="org.thvc.happyi" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="d21d7fb9ff0b59c6f3bb394a" />
+        <!-- </>值来自开发者平台取得的AppKey -->
+
+    </application>
+
+</manifest>

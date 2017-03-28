@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_center"
+                style="@style/happyi_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待支持活动" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/img_error"
+        android:gravity="center"
+        android:textColor="@color/happyi_secondary_content"
+        android:textSize="@dimen/font_size_big"
+        android:visibility="gone" />
+
+        <org.thvc.happyi.view.XList.XListView
+            android:id="@+id/lv_noclaim_party"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/party_background"
+            android:layout_below="@id/rl_layout_title"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:focusable="false"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:focusableInTouchMode="false"
+            android:listSelector="#00000000" />
+</RelativeLayout>

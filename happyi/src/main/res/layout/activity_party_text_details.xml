@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_title_center"
+            style="@style/happyi_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="图文详情" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_layout_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_layout_title"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="活动详情"
+                android:textColor="@color/happyi_title_color"
+                android:textSize="@dimen/font_size_big" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/img_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:text="DETAILS"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_normal" />
+
+            <WebView
+                android:id="@+id/web_detalis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></WebView>
+
+            <TextView
+                android:id="@+id/tv_destination_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/web_detalis"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/ll_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_destination_name"
+                android:orientation="horizontal"></LinearLayout>
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_center"
+                style="@style/happyi_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/system_settings" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="意见反馈"
+            android:textColor="@color/party_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/party_background" />
+
+        <TextView
+            android:id="@+id/tv_change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="修改密码"
+            android:textColor="@color/party_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/party_background" />
+
+        <TextView
+            android:id="@+id/tv_happyi_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:text="@string/about_happyi"
+            android:textColor="@color/party_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/party_background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="系统版本"
+                android:textColor="@color/party_text_color"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/party_text_color"
+                android:textSize="@dimen/font_size_normal" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/party_background" />
+
+        <TextView
+            android:id="@+id/tv_SignOut"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/icon_go"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="注销登录"
+            android:textColor="@color/party_text_color"
+            android:textSize="@dimen/font_size_normal" />
+
+
+    </LinearLayout>
+</LinearLayout>

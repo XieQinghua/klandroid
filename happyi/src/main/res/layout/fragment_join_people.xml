@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/rb_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_normal_shape"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginRight="5dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:gravity="center"
+            android:selectAllOnFocus="false"
+            android:text="已签到"
+            android:textColor="@color/main_nav_text_color" />
+
+        <RadioButton
+            android:id="@+id/rb_not_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_normal_shape"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:gravity="center"
+            android:selectAllOnFocus="false"
+            android:text="未签到"
+            android:textColor="@color/main_nav_text_color" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/radio"
+        android:background="@color/party_background" />
+
+    <FrameLayout
+        android:id="@+id/sign_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view"
+        android:layout_marginTop="5dp">
+    </FrameLayout>
+
+</RelativeLayout>

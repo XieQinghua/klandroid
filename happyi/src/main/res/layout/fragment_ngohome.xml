@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ngo_name"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingMultiplier="1.2"
+        android:singleLine="false"
+        android:text="简介"
+        android:textColor="@color/happyi_content_color"
+        android:textSize="@dimen/font_size_normal" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="40dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_text"
+        android:layout_marginLeft="20dp"
+        android:background="@color/orangered" />
+
+    <TextView
+        android:id="@+id/tv_ngo_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingMultiplier="1.2"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/happyi_content_color"
+        android:textSize="@dimen/font_size_middle" />
+
+</RelativeLayout>

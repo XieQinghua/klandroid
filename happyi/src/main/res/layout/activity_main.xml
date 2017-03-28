@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"></LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/main_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/maintabs_radio_home"
+                style="@style/main_radiobutton"
+                android:checked="true"
+                android:drawableTop="@drawable/main_home_bg"
+                android:text="@string/main_happyi"
+                android:textColor="@color/main_nav_text_color" />
+
+            <RadioButton
+                android:id="@+id/maintabs_radio_ngo"
+                style="@style/main_radiobutton"
+                android:drawableTop="@drawable/main_ngo_bg"
+                android:text="@string/main_organization"
+                android:textColor="@color/main_nav_text_color" />
+
+            <RadioButton
+                android:id="@+id/maintabs_radio_mine"
+                style="@style/main_radiobutton"
+                android:drawableTop="@drawable/main_my_bg"
+                android:text="@string/main_me"
+                android:textColor="@color/main_nav_text_color" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

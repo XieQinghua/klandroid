@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\android\klandroid\happyi\libs\BaiduLBS_Android.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="384378b87bfd3b1810cc1d1dddbf1ea14bb17b62">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\BaiduLBS_Android_df47665d0dc95b5ce0cf98dcdd070d5de5aed2e2.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\IndoorscapeAlbumPlugin.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5ad0fb8bd5f156e997ef3c0ee15752f5bb78de13">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\IndoorscapeAlbumPlugin_2db66b25a4dbc87e96ac45d9645e6d8e49841d5c.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\fastjson-1.1.40.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cf8b196dea0f5efa96adc81c047adf7b3d4633ed">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\fastjson-1.1.40_c85d5555cab979db205b47609ccdfd015f42d139.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\volley.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="590ecde83dc99416ba69adbeaf0ead91574b30ac">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\volley_8cc0b0c59d4e8fc5a2ffb9a41ffb009b875d35fd.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\jpush-android-2.1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0f26f97f6d6c7cb02247e1ec35034732f234badb">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\jpush-android-2.1.5_da98c7f147b72dba0110bbe11a5e02a32aded998.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-ShortMessage-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="600c29e53c1196bde47dd1ceffbc4ba827d41ee3">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-ShortMessage-2.6.4_afd8a7692de31ccdf8a430c9af1a706d08482fd3.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\zxing.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e88c14e6e7daa0fa65172a62b54ee6a16ff4162d">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\zxing_1dad85f955bcce9e86c350aa3b3c071dc1dde172.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\qiniu-android-sdk-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a72b1397972cac384349e840ed587e4c79e72180">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\qiniu-android-sdk-7.0.1_ce3c43ae50112d86435cf85f0822d746cb2cb58a.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.0_044137b91dbe64e0c8e5b4677f236e5a984421ba.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_582e305666c806f0ab61768f2f3557f4a370a36a.jar" />
+    </item>
+    <item
+        jar="D:\sdk\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\support-annotations-22.2.0_42e760ac50539bedbf9bd3d4ba399d7fe37e7e47.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\build\intermediates\exploded-aar\klandroid\library\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e8338381282dd4afeef172a429e42ea1ceb1777f">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\klandroid-library-unspecified_26b72c9eb6a9cc0cfc769e122151affb84ff9fc4.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\android-async-http-1.4.6.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\android-async-http-1.4.6_e1ee67ed4b1645d0acba12c786998afa51cf8ec5.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-Wechat-Moments-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dc2b46a70ccf00592d33c3afde812993d9db4ac9">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Moments-2.6.4_13e2d5a9f2414a9dda1035a89210a751f3b3c24e.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\xUtils-2.6.12.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="fd6ceeb1d292b8f044101b4fafe3eb4f89320ffa">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\xUtils-2.6.12_6b2c03a07bb8295755d735d9121cd96b4c162889.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.0_425da6422c295570b29850a214a40e4bd8799a22.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\alipaySdk-20151112.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5ce758768906f045b279735e7cefc0b89160d9d6">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\alipaySdk-20151112_662e8834313965cba9f1bb9c28917da92bd3c54b.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-Core-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7bb32fc69b3520f10333fcc5cdd78a4495761a64">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-Core-2.6.4_c32d6ff20c7c71c9b5da4bd62a2287b06380bb58.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-SinaWeibo-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4536d9f7a5fb826609d5a17b30cabb21ead18d1c">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-SinaWeibo-2.6.4_1c933a92c5f89041c6e98c4d435b2ba182403cd4.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-QZone-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="606a553246f241278b45e19d5029c915ae49c316">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-QZone-2.6.4_9a6971d9d8f1eb018bae4fc0935b55ea6564faba.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-TencentWeibo-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="83cf7f24b0717fbe9272342f0b971ed4af13d106">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-TencentWeibo-2.6.4_83f56176e89fcd30f3f5ce525dcaba4e28314908.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\libammsdk.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d7c2f29c05b35e8c8713be2b81c41cf18f98b64a">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\libammsdk_8ff8065c5c5b842d4337f08c173970fbbde91da2.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-QQ-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e8d59be1960d4e1b1f9119cc77966e5f7c9fb7bd">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-QQ-2.6.4_5895533d9c141f378ca7c362914c5213710213c1.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\universal-image-loader-1.9.3-with-sources.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="03e3948d42b8d78961a092a184af66bd86da42e6">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-with-sources_cfff30209373ffa05c8703648ebc93008ae3e47e.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-Wechat-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="100546a136041bcbeb9b90790b6361c932545676">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-2.6.4_cb22637a6f8f063d0f49800178cb87332200ceea.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\build\intermediates\exploded-aar\klandroid\SlidingLibrary\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="528ea7b27da06583c891b3eb6758a587bf235662">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\klandroid-SlidingLibrary-unspecified_40b2ab7b84dcfbfcedd4223f2a3c973cb9f301ef.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-Email-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="81a92328963aea17992c71f3f95e60c355c570c3">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-Email-2.6.4_9dc62ff5baa745febb8e3943518247372cee3424.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\ShareSDK-Wechat-Core-2.6.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a6e8417962070d895b3567c68f104f628462bc35">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Core-2.6.4_c42c1ecc574ee5b732d5ac69f2dfb5959684a31a.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\MobCommons.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="86052ea3c2fcfa2f2d25d71ae34ab20b8c2dca9a">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\MobCommons_ddcbd85d8c4d3e52b8a8ae3431d5dbbe0b8b41ed.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\build\intermediates\exploded-aar\com.tencent.bugly\crashreport\2.3.6\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c8eebe2b083a65d16f332110a0d59159513033fb">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\com.tencent.bugly-crashreport-2.3.6_a6a1622f4ee838f397a1fba2e568f9005103babe.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\libs\MobTools.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4aae467e0a293d5d5cd0643e51b7b854bcc397c8">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\MobTools_e740975a0042abdd1c4a26394eb42c54b4487b90.jar" />
+    </item>
+    <item
+        jar="E:\android\klandroid\happyi\build\intermediates\exploded-aar\com.tencent.bugly\crashreport\2.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="77ce2479966f7f7fb8c18213136c6282d7390407">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\release\com.tencent.bugly-crashreport-2.4.0_20bca819bf5a50cef59db6fdf532459224f5cb29.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="E:\android\klandroid\happyi\build\intermediates\pre-dexed\debug\gson-2.4_6890e801880bd242164763e4b5f4086b8128ed8f.jar" />
+    </item>
+
+</items>

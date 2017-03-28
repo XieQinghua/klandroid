@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <!--浅灰色-->
+    <color name="ashgray">#eeeeee</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="gray">#C3C3C3</color>
+
+    <!--二维码功能添加封装颜色！！！其他地方不要引用 -->
+    <color name="result_view">#b0000000</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="border_gray">#d9dfe5</color>
+
+    <!--happyi专用封装颜色-->
+    <!--标题，昵称-->
+    <!--  <color name="happyi_title_color">#333333</color>-->
+    <color name="happyi_title_color">#ff000000</color>
+    <!--主题内容-->
+    <!--  <color name="happyi_content_color">#666666</color>-->
+    <color name="happyi_content_color">#c5000000</color>
+    <!--次要展示信息-->
+    <!-- <color name="happyi_secondary_content">#999999</color>-->
+    <color name="happyi_secondary_content">#80000000</color>
+
+    <!-- 灰色线-->
+    <color name="gray_line">#757575</color>
+    <!--橙色 -->
+    <color name="orangered">#ea8706</color>
+    <!-- 红色-->
+    <color name="red">#ff0000</color>
+    <!-- 绿色-->
+    <color name="green">#43B05F</color>
+    <!--字体颜色及页面背景色-->
+    <color name="party_background">#e8e9ed</color>
+    <color name="party_text_color">#ff000000</color>
+    <color name="party_backgrounds">#d2d2d2</color>
+    <color name="light_grey">#F4F5F7</color>
+
+    <color name="bg_gray">#e1e1e1</color>
+    <color name="light_gray">#99a4b7</color>
+    <color name="light_blue">#87d0f2</color>
+
+</resources>
+
+

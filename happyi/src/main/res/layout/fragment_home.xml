@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:layout_alignParentTop="true"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_back"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/tv_title_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_title_logo" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/icon_search" />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/title_lay2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/orangered" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+    <org.thvc.happyi.view.PullToRefreshView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_pull_refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/party_background"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <org.thvc.happyi.view.CustomScrollView
+            android:id="@+id/sv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--轮播图布局-->
+                <FrameLayout
+                    android:id="@+id/fl_banner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dip"
+                    android:layout_alignParentTop="true">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        android:background="#50000000"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_banner_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_size_middle" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/v_dot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"></LinearLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+                <!--活动标签-->
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fadingEdge="none"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/title_lay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lay1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:orientation="horizontal"></LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/orangered" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/iv_hot_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible" />
+
+                <org.thvc.happyi.view.MyGridView
+                    android:id="@+id/gv_hot_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/party_background"
+                    android:cacheColorHint="#00000000"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@drawable/gridview_item_selector"
+                    android:numColumns="2"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:verticalSpacing="5dp"></org.thvc.happyi.view.MyGridView>
+
+                <org.thvc.happyi.view.MyListView
+                    android:id="@+id/lv_hot_party"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:listSelector="#00000000" />
+
+
+                <ImageView
+                    android:id="@+id/iv_rec_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible" />
+
+                <org.thvc.happyi.view.MyGridView
+                    android:id="@+id/gv_rec_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/party_background"
+                    android:cacheColorHint="#00000000"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@drawable/gridview_item_selector"
+                    android:numColumns="2"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:verticalSpacing="5dp"></org.thvc.happyi.view.MyGridView>
+
+                <org.thvc.happyi.view.MyListView
+                    android:id="@+id/lv_rec_party"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:listSelector="#00000000" />
+
+                <ImageView
+                    android:id="@+id/iv_new_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible" />
+
+                <org.thvc.happyi.view.MyGridView
+                    android:id="@+id/gv_new_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/party_background"
+                    android:cacheColorHint="#00000000"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@drawable/gridview_item_selector"
+                    android:numColumns="2"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:verticalSpacing="5dp"></org.thvc.happyi.view.MyGridView>
+
+            </LinearLayout>
+
+        </org.thvc.happyi.view.CustomScrollView>
+    </org.thvc.happyi.view.PullToRefreshView>
+</LinearLayout>

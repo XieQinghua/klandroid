@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <org.thvc.happyi.view.CircleImageView
+        android:id="@+id/civ_head_pic"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_head_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/civ_head_pic"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="黄**"
+            android:textColor="@color/happyi_title_color"
+            android:textSize="@dimen/font_size_normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/tv_payfee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="支付了1.00元参与活动"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_middle" />
+
+            <TextView
+                android:id="@+id/tv_join_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/icon_deadline"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="4天前"
+                android:textSize="@dimen/font_size_middle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/civ_head_pic"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:background="@color/party_background" />
+</RelativeLayout>

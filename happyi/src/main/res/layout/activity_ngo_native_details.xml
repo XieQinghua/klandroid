@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_default_cover">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <org.thvc.happyi.view.CircleImageView
+                android:id="@+id/iv_ngo_img"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/icon_head_default"
+                app:border_color="@color/party_background"
+                app:border_width="1dp" />
+
+            <TextView
+                android:id="@+id/tv_ngo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_ngo_img"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="adsdsad"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_middle" />
+
+            <LinearLayout
+                android:id="@+id/line1_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="粉丝"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+
+                <TextView
+                    android:id="@+id/tv_ngo_fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="800"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_collect"
+                android:layout_width="50dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_oranged_bg"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="关注"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_middle"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/relative_ngo_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_ngo_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="主页"
+                    android:textColor="@color/orangered"
+                    android:textSize="@dimen/font_size_big" />
+
+                <TextView
+                    android:id="@+id/view_ngo_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/orangered"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/relative_ngo_party"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_ngo_party"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="活动"
+                    android:textColor="@color/happyi_content_color"
+                    android:textSize="@dimen/font_size_big" />
+
+                <TextView
+                    android:id="@+id/view_ngo_party"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/orangered"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/ngo_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+    </FrameLayout>
+
+</LinearLayout>

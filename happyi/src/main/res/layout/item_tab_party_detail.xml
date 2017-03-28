@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/party_tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginTop="5dp"
+   >
+    <!--这个是我的活动的详情tab-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/tab_party_join_people"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_join_people"
+                android:text="@string/join_people"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/party_text_color"
+                android:textSize="@dimen/font_size_big"/>
+
+            <TextView
+                android:id="@+id/iv_party_join_people"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/orangered"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:text="@string/comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/party_text_color"
+                android:textSize="@dimen/font_size_big" />
+
+
+            <TextView
+                android:id="@+id/iv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/orangered"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_fans"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fans"
+                android:text="@string/fans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/party_text_color"
+                android:textSize="@dimen/font_size_big" />
+
+            <TextView
+                android:id="@+id/iv_fans"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/orangered"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

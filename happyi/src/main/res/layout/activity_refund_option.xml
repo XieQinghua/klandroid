@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:padding="@dimen/icon_padding"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_center"
+                style="@style/happyi_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/happyi_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="20dp"
+            android:text="@string/refund_way" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/party_background" />
+
+        <RelativeLayout
+            android:id="@id/rl_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/alipay"
+                android:drawablePadding="12dp"
+                android:text="@string/account_ali"
+                android:gravity="center"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_normal" />
+
+            <ImageButton
+                android:id="@+id/rb_ali_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_selected"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_normal_shape"
+            android:gravity="center_vertical"
+            android:hint="@string/input_ali_account"
+            android:paddingLeft="5dp"
+            android:textColor="@color/happyi_content_color"
+            android:textSize="@dimen/font_size_middle" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_normal_shape"
+            android:gravity="center_vertical"
+            android:hint="请输入支付宝账户姓名"
+            android:paddingLeft="5dp"
+            android:textColor="@color/happyi_content_color"
+            android:textSize="@dimen/font_size_middle" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/icon_bank"
+                android:drawablePadding="12dp"
+                android:text="@string/bank"
+                android:gravity="center"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_normal" />
+
+            <ImageButton
+                android:id="@+id/rb_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_unselected"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_bank_account"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_normal_shape"
+            android:gravity="center_vertical"
+            android:hint="@string/input_bank_account"
+            android:paddingLeft="5dp"
+            android:textColor="@color/happyi_content_color"
+            android:textSize="@dimen/font_size_middle"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_owner_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_normal_shape"
+            android:gravity="center_vertical"
+            android:hint="@string/owner"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/font_size_middle"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_bank_name"
+            android:paddingLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_normal_shape"
+            android:gravity="center_vertical"
+            android:hint="@string/bank_name"
+            android:textSize="@dimen/font_size_middle"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/happyi_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_ok_selector"
+            android:text="提    交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_big" />
+    </LinearLayout>
+</LinearLayout>

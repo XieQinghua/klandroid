@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "org.thvc.happyi"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 6
+        versionName "1.3.2"
+//        ndk {
+//            //设置支持的SO库架构
+//            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a', 'mips', 'mips64'
+//        }
+    }
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError true
+    }
+
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file("C:/Users/Administrator/.android/debug.keystore")
+        }
+        relealse {
+            storeFile file("C:/Users/Administrator/key/happyi.keystore")
+            storePassword "kuaileyi"
+            keyAlias "happyi_2015"
+            keyPassword "kuaileyi"
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.relealse
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.google.code.gson:gson:2.4'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.1.5
+    compile 'com.tencent.bugly:crashreport:latest.release'
+//    compile 'com.tencent.bugly:crashreport:2.3.0'
+    compile files('libs/MobCommons.jar')
+    compile files('libs/MobTools.jar')
+    compile files('libs/ShareSDK-Core-2.6.4.jar')
+    compile files('libs/ShareSDK-Email-2.6.4.jar')
+    compile files('libs/ShareSDK-QQ-2.6.4.jar')
+    compile files('libs/ShareSDK-QZone-2.6.4.jar')
+    compile files('libs/ShareSDK-ShortMessage-2.6.4.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.6.4.jar')
+    compile files('libs/ShareSDK-TencentWeibo-2.6.4.jar')
+    compile files('libs/ShareSDK-Wechat-2.6.4.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.6.4.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.6.4.jar')
+    compile files('libs/alipaySdk-20151112.jar')
+    compile project(':library')
+    compile project(':SlidingLibrary')
+}
+
+
+bugly {
+    appId = '900053677'
+    appKey = 'kq6JZ0Ke9wu2ohmJ'
+    execute = true
+    upload = true
+}

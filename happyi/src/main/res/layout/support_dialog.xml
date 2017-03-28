@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/dialog_circle_corners_bg"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="快乐益"
+            android:textColor="@color/happyi_content_color"
+            android:textSize="@dimen/font_size_big"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="普通用户支持标准:"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_normal"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_ordinary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="支持比例:30% 最低金额:10元 最高金额:300元"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_normal"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="新用户支持标准:"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_normal"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_new"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="支持比例:30% 最低金额:10元 最高金额:300元"
+                android:textColor="@color/happyi_content_color"
+                android:textSize="@dimen/font_size_normal"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_normal_shape">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:padding="6dp"
+                    android:singleLine="true"
+                    android:text="我认可该活动,确认给予以上支持标准支持"
+                    android:textColor="@color/orangered"
+                    android:textSize="@dimen/font_size_middle" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/happyi_content_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_confirm_selector"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/orangered"
+                android:textSize="@dimen/font_size_normal" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/happyi_content_color"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_cancel_selector"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/orangered"
+                android:textSize="@dimen/font_size_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
